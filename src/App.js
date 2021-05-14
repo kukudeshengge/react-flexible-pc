@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Switch, HashRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import routes from './router';
+import { Suspense } from 'react';
+import './css/index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Switch>
+        <Suspense fallback={<div>loading...</div>}>
+          {renderRoutes(routes)}
+        </Suspense>
+      </Switch>
+    </HashRouter>
   );
 }
 
