@@ -45,5 +45,5 @@
     "lib-flexible-for-dashboard": "^1.0.2",
     "webpackbar": "^5.0.0-3"
   },
-  "homepage": "build/"
+  "homepage": "/react-flexible-pc/build/"
 }
